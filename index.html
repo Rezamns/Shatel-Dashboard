@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shatel Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./docs.theme.min.css">
+  <link rel="stylesheet" href="./owl.theme.default.min.css">
+  <script src="./jquery.min.js"></script>
+  <script src="./owl.carousel.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #myBtn:hover{background-color: rgb(0, 174, 255);}
+
+    .icon{
+      height: 30px;
+      width: 40px;
+    }
+
+    #rw{
+      box-shadow: 5px 10px 15px gray;
+      padding-left: 15px;
+      margin-top: 30px;
+    }
+
+    #rrw{
+      padding-left: 77px;
+    }
+
+    .row{
+        
+        text-align: center;         
+        display: block;
+        border-radius: 10px;
+        }
+
+    .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}.owl-carousel{display:none;width:100%;z-index:1}.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;backface-visibility:hidden;}.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;transform:translate3d(0,0,0)}.owl-carousel .owl-item,.owl-carousel .owl-wrapper{backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}.owl-carousel .owl-item{min-height:1px;float:left;backface-visibility:hidden;-webkit-touch-callout:none}.owl-carousel .owl-item img{display:block;width:100%}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev,.owl-carousel button.owl-dot{background:0 0;color:inherit;border:none;padding:0!important;font:inherit}.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{visibility:hidden}.owl-carousel.owl-drag .owl-item{-ms-touch-action:pan-y;touch-action:pan-y;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-grab{cursor:move;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}.owl-carousel .animated{animation-duration:1s;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}.owl-carousel .owl-animated-out{z-index:1}.owl-carousel .fadeOut{animation-name:fadeOut}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.owl-height{transition:height .5s ease-in-out}.owl-carousel .owl-item .owl-lazy{opacity:0;transition:opacity .4s ease}.owl-carousel .owl-item .owl-lazy:not([src]),.owl-carousel .owl-item .owl-lazy[src^=""]{max-height:0}.owl-carousel .owl-item img.owl-lazy{transform-style:preserve-3d}.owl-carousel .owl-video-wrapper{position:relative;height:100%;background:#000}.owl-carousel .owl-video-play-icon{position:absolute;height:80px;width:80px;left:50%;top:50%;margin-left:-40px;margin-top:-40px;background:url(owl.video.play.png) no-repeat;cursor:pointer;z-index:1;backface-visibility:hidden;transition:transform .1s ease}.owl-carousel .owl-video-play-icon:hover{-ms-transform:scale(1.3,1.3);transform:scale(1.3,1.3)}.owl-carousel .owl-video-playing .owl-video-play-icon,.owl-carousel .owl-video-playing .owl-video-tn{display:none}.owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;transition:opacity .4s ease}.owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
+    .img{padding: 0%;margin: 0%;display: inline;height: 540px;border-radius: 10px;}
+
+    img{
+      border-radius: 10px;
+    }
+
+    #logo{
+      position: relative;
+      left: 39%;
+      top: 20px;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: rgba(0, 0, 255, 0.747);
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 15px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: orange;
+}
+
+.text {
+  color: red;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#next{
+  color: red;
+  position: absolute;
+}
+</style>
+<style>
+        
+  @import url(//codepen.io/chrisdothtml/pen/ojLzJK.css);
+
+  .col-sm-2{   
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 65px;
+    display: block;
+    transition: all 0.3s;
+    padding: 1px;
+  }
+
+  .col-sm-2:hover{
+    background-color: rgb(0, 145, 189);
+  }
+
+  .tiles {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(0, 132, 255);
+    padding: 0%;    
+    transform: translate(-50%, -50%);
+  }
+
+  .tiles .tile {
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+    opacity: 0.99;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .tiles .tile:before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    z-index: 2;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+  }
+  
+  .tiles .tile .details {
+    font-size: 16px;
+    padding: 20px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .tiles .tile .details span {
+    display: block;
+    opacity: 0;
+    position: relative;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+  }
+
+  .tiles .tile .details .info {
+    line-height: 1.2;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .tiles .tile:focus:before,  .tiles .tile:focus span, .tiles .tile:hover:before,  .tiles .tile:hover span {opacity: 1};
+  .tiles .tile:focus span, .tiles .tile:hover span {top: 0};
+  .tiles .tile:focus .info, .tiles .tile:hover .info {transition-delay: 0.25s};
+ 
+</style>
+<body>
+
+  <a href="https://www.shatel.ir/"><img id="logo" src="shatelogo.jpg"></a>
+
+
+<div class="row" id="rw">
+
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="internet.png" title="پورتال"></a>
+    <a href="https://www.namava.ir/"><img class="col-sm-2" src="namava.jpg" title="نماوا"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="shatel.jpg" title="شاتل"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="foodstall.jpg" title="بوفه"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="coffe.jpg" title="کافی شاپ"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="webcard.svg" title="وب کارت"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="nashrie.svg" title="نشریه داخلی شاتل"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="meeting.jpg" title="جلسات آنلاین شاتل"></a>
+    <a href="https://www.shatelmobile.ir/"><img class="col-sm-2" src="mobile.jpg" title="شاتل موبایل"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="pmeeting.jpg" title="جلسات خصوصی آنلاین شاتل"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="wifi.jpg" title="برسی سرعت اینترنت"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="crm.png" title="crm"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="cloud.svg" title="shatel cloud"></a>
+    <a href="https://www.shatel.ir/"><img class="col-sm-2" src="rocket.svg" title="Rocket chat"></a>
+    <a href="https://www.delsa.net/"><img class="col-sm-2" src="Delsa.png" title="دلسا"></a>
+
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="برگشت به بالا"><i class="fa fa-angle-up"></i></button>
+
+<section id="demos">
+    <div class="row" id="rrw">
+      <div class="large-11 columns">
+
+        <div class="fadeOut owl-carousel owl-theme">
+
+          <div class="img">
+            <h3>text number 1</h3>
+            <img src="img1.jpg ">
+          </div>
+
+          <div class="img">
+            <h3>text number 2</h3>
+            <img src="img2.jpg ">
+          </div>
+
+          <div class="img">
+            <h3>text number 3</h3>
+            <img src="img3.jpg ">
+          </div>
+
+          <div class="img">
+            <h3>text number 4</h3>          
+            <button onclick="topFunction()" id="next" title="برگشت به بالا"><i class="fa fa-angle-up"></i></button>
+            <img src="img4.jpg ">
+          </div>
+
+  </div>
+</div>
+</div>
+  </div>
+</section>
+
+<section id="demos">
+  <div class="row" id="rrw">
+    <div class="large-11 columns">
+
+      <div class="fadeOut owl-carousel owl-theme">
+
+        <div class="img">
+          <h3>text number 1</h3>
+          <img src="img1.jpg ">
+        </div>
+
+        <div class="img">
+          <h3>text number 2</h3>
+          <img src="img2.jpg ">
+        </div>
+
+        <div class="img">
+          <h3>text number 3</h3>
+          <img src="img3.jpg ">
+        </div>
+
+        <div class="img">
+          <h3>text number 4</h3>
+          <img src="img4.jpg ">
+        </div>
+        
+ 
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+<script>
+    jQuery(document).ready(function($) {
+      $('.fadeOut').owlCarousel({
+        items: 1,
+        animateOut: 'fadeOut',
+        loop: true,
+        margin: 10,
+      });
+      $('.custom1').owlCarousel({
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
+        items: 1,
+        margin: 30,
+        stagePadding: 30,
+        smartSpeed: 450
+      });
+    });
+    
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+   } else {
+        mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</html>
