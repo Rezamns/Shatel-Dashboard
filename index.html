@@ -25,6 +25,20 @@ img{
   border-radius: 10px;
 }
 
+.newsimg{
+  height: 400px;
+  width: 500px;
+  padding: 20px;
+  float: right;
+  border-radius: 10px;
+}
+
+#newsbutton{
+  float: left;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -42,14 +56,6 @@ img{
   text-align: center;
 }
 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 .dot {
   height: 15px;
   width: 15px;
@@ -61,7 +67,13 @@ img{
 }
 
 .active {
-  background-color: #717171;
+  background-color: #555555;
+  border-radius: 10px;
+}
+
+.tt{
+  margin-top: 30px;
+  color: white;
 }
 
 .fade {
@@ -158,7 +170,6 @@ img{
   height: 100px;
   width: 100px;
   margin: 20px;
-  text-align: center;
   border-radius: 10px;
   margin-left: 65px;
   display: block;
@@ -267,19 +278,16 @@ img{
 <div class="slideshow-container">
 
   <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
     <img src="img1.jpg" style="width:100%">
     <div class="text">Caption Text</div>
   </div>
   
   <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
     <img src="img2.jpg" style="width:100%">
     <div class="text">Caption Two</div>
   </div>
   
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
     <img src="img3.jpg" style="width:100%">
     <div class="text">Caption Three</div>
   </div>
@@ -294,32 +302,22 @@ img{
   </div>
   <br>
 
-  <section id="demos">
-    <div class="row" id="rrw">
-      <div class="large-11 columns">
-
-        <div class="fadeOut owl-carousel owl-theme">
-
-          <div class="img">
-            <h3>text number 1</h3>
-            <img src="img1.jpg ">
-          </div>
-
-          <div class="img">
-            <h3>text number 2</h3>
-            <img src="img2.jpg ">
-          </div>
-
-          <div class="img">
-            <h3>text number 3</h3>
-            <img src="img3.jpg ">
-          </div>
-
-  </div>
+<div class="row" id="rw">
+<img src="img1.jpg" class="newsimg">
+<h2><b>رود های آمازون</b></h2>
+<p>سخنگوی وزارت امور خارجه با بیان اینکه ما عمیقا نگران تحولات افغانستان هستیم، گفت: ما ابتکار صلح تهران را پیگیری می‌کنیم تا در گفتگوهایسخنگوی وزارت امور خارجه با بیان اینکه ما عمیقا نگران تحولات افغانستان هستیم، گفت: ما ابتکار صلح تهران را پیگیری می‌کنیم تا در گفتگوهای بین‌الافغانی، یک دولت فراگیر تشکیل شود.سخنگوی وزارت امور خارجه با بیان اینکه ما عمیقا نگران تحولات افغانستان هستیم، گفت: ما ابتکار صلح تهران را پیگیری می‌کنیم تا در گفتگوهای بین‌الافغانی، یک دولت فراگیر تشکیل شود. بین‌الافغانی، یک دولت فراگیر تشکیل شود.</p>
+<a href="#" title="ادامه خبرها"><button id="newsbutton">...ادامه خبر</button></a>
 </div>
-</div>
+<br>
+
+<div class="row" id="rw">
+  <img src="img1.jpg" class="newsimg">
+  <h2><b>دریا های آمازون</b></h2>
+  <p>سخنگوی وزارت امور خارجه با بیان اینکه ما عمیقا نگران تحولات افغانستان هستیم، گفت: ما ابتکار صلح تهران را پیگیری می‌کنیم تا در گفتگوهایسخنگوی وزارت امور خارجه با بیان اینکه ما عمیقا نگران تحولات افغانستان هستیم، گفت: ما ابتکار صلح تهران را پیگیری می‌کنیم تا در گفتگوهای بین‌الافغانی، یک دولت فراگیر تشکیل شود.سخنگوی وزارت امور خارجه با بیان اینکه ما عمیقا نگران تحولات افغانستان هستیم، گفت: ما ابتکار صلح تهران را پیگیری می‌کنیم تا در گفتگوهای بین‌الافغانی، یک دولت فراگیر تشکیل شود. بین‌الافغانی، یک دولت فراگیر تشکیل شود.</p>
+  <a href="#" title="ادامه خبرها"><button id="newsbutton">...ادامه خبر</button></a>
+  <br>
   </div>
-</section>
+  <br>
 </body>
 <script>
 
@@ -373,7 +371,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3000);
+  setTimeout(showSlides, 1000);
 }
 </script>
 </html>
