@@ -1,0 +1,36 @@
+mybutton = document.getElementsByClassName("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton[0].style.opacity = "1";
+} else {
+    mybutton[0].style.opacity = "0";
+}}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+const dashboardnews ='{ "news":[' +
+  '{ "title":"اخبار نماوا" , "date":"1400/07/20" , "img":"img1.png" , "description": "گروه شرکت‌های شاتل با بیش از ۱۳۰۰ نفر نیروی انسانی متخصص، با گسترش دامنه­‌ی توزیع خدمات خود در استان­‌های مختلف از طریق نزدیک به ۴۰۰ دفتر نمایندگی، یک هزار عامل فروش و بیش از ۲۵۰۰ نفر نیروی انسـانی توانسته است سراسر کشور را تحت پوشش خدمات خود قرار دهد و بزرگ‌ترین سهم از مشتریان بازار اینترنت و خدمات تکمیلی آن در کشور را به‌ویژه در حوزه‌ی یروی انسانی متخصص، با گسترش دامنه­‌ی توزیع خدمات خود در استان­‌های مختلف از طریق نزدیک به ۴۰۰ دفتر نمایندگی، یک هزار عامل فروش و بیش از ۲۵۰۰ نفر نیروی انسـانی توانسته است سراسر کشور را تحت پوشش خدمات خود قرار دهد و بزرگ‌ترین سهم از مشتریان بازار اینترنت و خدمات تکمیلی آن در کشور را به‌ویژه در حوزه‌ی ارایه‌ی خدمات اینترنت پرسرعت +ADSL2 به خویش اختصاص دهدرایه‌ی خدمات اینترنت پرسرعت +ADSL2 به خویش اختصاص دهد." },'+
+  '{ "title":"اخبار دلسا" , "date":"1400/07/21" , "img":"img3.png" , "description": "گروه شرکت‌های شاتل با بیش از ۱۳۰۰ نفر نیروی انسانی متخصص، با گسترش دامنه­‌ی توزیع خدمات خود در استان­‌های مختلف از طریق نزدیک به ۴۰۰ دفتر نمایندگی، یک هزار عامل فروش و بیش از ۲۵۰۰ نفر نیروی انسـانی توانسته است سراسر کشور را تحت پوشش خدمات خود قرار دهد و بزرگ‌ترین سهم از مشتریان بازار اینترنت و خدمیروی انسانی متخصص، با گسترش دامنه­‌ی توزیع خدمات خود در استان­‌های مختلف از طریق نزدیک به ۴۰۰ دفتر نمایندگی، یک هزار عامل فروش و بیش از ۲۵۰۰ نفر نیروی انسـانی توانسته است سراسر کشور را تحت پوشش خدمات خود قرار دهد و بزرگ‌ترین سهم از مشتریان بازار اینترنت و خدمات تکمیلی آن در کشور را به‌ویژه در حوزه‌ی ارایه‌ی خدمات اینترنت پرسرعت +ADSL2 به خویش اختصاص دهدات تکمیلی آن در کشور را به‌ویژه در حوزه‌ی ارایه‌ی خدمات اینترنت پرسرعت +ADSL2 به خویش اختصاص دهد." },'+
+  '{ "title":"اخبار شاتل" , "date":"1400/07/22" , "img":"img2.png" , "description": "گروه شرکت‌های شاتل با بیش از ۱۳۰۰ نفر نیروی انسانی متخصص، با گسترش دامیروی انسانی متخصص، با گسترش دامنه­‌ی توزیع خدمات خود در استان­‌های مختلف از طریق نزدیک به ۴۰۰ دفتر نمایندگی، یک هزار عامل فروش و بیش از ۲۵۰۰ نفر نیروی انسـانی توانسته است سراسر کشور را تحت پوشش خدمات خود قرار دهد و بزرگ‌ترین سهم از مشتریان بازار اینترنت و خدمات تکمیلی آن در کشور را به‌ویژه در حوزه‌ی ارایه‌ی خدمات اینترنت پرسرعت +ADSL2 به خویش اختصاص دهدنه­‌ی توزیع خدمات خود در استان­‌های مختلف از طریق نزدیک به ۴۰۰ دفتر نمایندگی، یک هزار عامل فروش و بیش از ۲۵۰۰ نفر نیروی انسـانی توانسته است سراسر کشور را تحت پوشش خدمات خود قرار دهد و بزرگ‌ترین سهم از مشتریان بازار اینترنت و خدمات تکمیلی آن در کشور را به‌ویژه در حوزه‌ی ارایه‌ی خدمات اینترنت پرسرعت +ADSL2 به خویش اختصاص دهد." }]}'
+
+const obj = JSON.parse(dashboardnews);
+
+document.getElementById("title-1").innerHTML = obj.news[0].title;
+document.getElementById("date-1").innerHTML = obj.news[0].date;
+document.getElementById("news-1").innerHTML = obj.news[0].description;
+document.getElementById("img-1").innerHTML = obj.news[0].img;
+
+document.getElementById("title-2").innerHTML = obj.news[1].title;
+document.getElementById("date-2").innerHTML = obj.news[1].date;
+document.getElementById("news-2").innerHTML = obj.news[1].description;
+document.getElementById("img-2").innerHTML = obj.news[1].img;
+
+document.getElementById("title-3").innerHTML = obj.news[2].title;
+document.getElementById("date-3").innerHTML = obj.news[2].date;
+document.getElementById("news-3").innerHTML = obj.news[2].description;
+document.getElementById("img-3").innerHTML = obj.news[2].img;
