@@ -183,8 +183,8 @@ img {
     display: flex;
     flex-direction: column;
     width: 107px;
-    /* height: 88px; */
     margin: 20px;
+    margin-top: 5px;
     border-radius: 10px;
     transition: all 0.3s;
     padding: 15px;
@@ -200,7 +200,6 @@ img {
 }
 
 .box > div {
-    /* max-height: 60px; */
     display: flex;
     justify-content: center;
     align-items: center;
